@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Viagens</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Viagens</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-card *ngFor="let viagem of viagens">
+      <ion-card-header>
+        <ion-card-subtitle>{{viagem.Descricao}}</ion-card-subtitle>
+        <ion-card-title>{{viagem.Local}}</ion-card-title>
+      </ion-card-header>
+      <img src="{{viagem.Imagem_da_Visita}}" alt="">
+      <ion-card-content>
+
+        {{viagem.Data_da_Visita}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
